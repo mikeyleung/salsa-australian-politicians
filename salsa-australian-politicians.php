@@ -204,11 +204,13 @@ function salsa_campaigns_error_page() {
 */
 function salsa_campaigns_postcode_page() {
   return '
-    <form id="salsa_campaigns_form" method="post" action="">
-      <input type="hidden" name="salsa_campaigns_method" value="select_mp">
-        <p>Postcode: <input type="text" name="salsa_campaigns_postcode" value="" size="4" /></p>
-      <input type="submit" name="Submit" class="button" value="Find my MP" />
-    </form>
+    <div class="gformwrapper">
+     <form action="http://theoaktree.org/act-now/its-good-to-say-thank-you/your-message/" method="post" id="salsa_campaigns_form">
+      <input type="hidden" value="select_mp" name="salsa_campaigns_method">
+       <li class="gfield"><label class="field_label">Postcode:</label><div class="ginput_container"><input type="text" class="small" size="6" value="" name="salsa_campaigns_postcode"></div></li>
+      <p><input type="submit" value="Find my MP" class="button" name="Submit"></p>
+     </form>
+    </div>
   ';
 }
 
