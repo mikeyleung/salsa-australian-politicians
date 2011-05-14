@@ -398,7 +398,8 @@ function salsa_campaigns_write_message_page($campaign_name, $mp_first_name, $mp_
       <div class="ginput_container"><input type="text" class="inputsubject" name="salsa_campaigns_subject" value="' . $content->Recommended_Subject . '" /></div></li>
 
       <li class="gfield"><label class="gfield_label">Message</label>
-      <div class="ginput_container"><textarea rows="18" cols="42" name="salsa_campaigns_message">' . $content->Recommended_Content . '</textarea></div></li>
+      <div class="ginput_container"><textarea rows="18" cols="42" name="salsa_campaigns_message">' . $content->Recommended_Content . '</textarea></div>
+       <div class="gfield_description">Please note your name will be automatically added at the bottom of the email.</div></li>
 
       <li class="gfield"><label class="gfield_label">First name</label>
       <div class="ginput_contnainer"><input type="text" name="salsa_campaigns_firstname" value="" /></div></li>
