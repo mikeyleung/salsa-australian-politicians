@@ -207,7 +207,7 @@ function salsa_campaigns_postcode_page() {
     <div class="gformwrapper">
      <form action="http://theoaktree.org/act-now/its-good-to-say-thank-you/your-message/" method="post" id="salsa_campaigns_form">
       <input type="hidden" value="select_mp" name="salsa_campaigns_method">
-       <li class="gfield"><label class="field_label">Postcode:</label><div class="ginput_container"><input type="text" class="small" size="6" value="" name="salsa_campaigns_postcode"></div></li>
+       <li class="gfield"><label class="gfield_label">Postcode:</label><div class="ginput_container"><input type="text" class="small" size="6" value="" name="salsa_campaigns_postcode"></div></li>
       <p><input type="submit" value="Find my MP" class="button" name="Submit"></p>
      </form>
     </div>
