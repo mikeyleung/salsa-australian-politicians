@@ -383,7 +383,8 @@ function salsa_campaigns_write_message_page($campaign_name, $mp_first_name, $mp_
   }
 
   $page = '
-    Enter your message and details to send to ' . $mp_first_name . ' ' . $mp_last_name . ':</p>
+    Add to OR replace our prepared message for ' . $mp_first_name . ' ' . $mp_last_name . ':</p>
+    <div class="gformwrapper">
     <form id="salsa_campaigns_form" method="post" action="">
       <input type="hidden" name="salsa_campaigns_method" value="send_message" />
       <input type="hidden" name="salsa_campaigns_action_key" value="'  . $current_action->action_KEY .  '" />
@@ -391,28 +392,29 @@ function salsa_campaigns_write_message_page($campaign_name, $mp_first_name, $mp_
       <input type="hidden" name="salsa_campaigns_postcode" value="' . $postcode . '" />
       <input type="hidden" name="salsa_campaigns_email_trigger_keys" value="' . $current_action->email_trigger_KEYS . '" />
 
-      <p>Subject</p>
-      <input type="text" name="salsa_campaigns_subject" value="' . $content->Recommended_Subject . '" />
+      <li class="gfield"><label class="gfield_label">Subject</label>
+      <div class="ginput_container"><input type="text" class="inputsubject" name="salsa_campaigns_subject" value="' . $content->Recommended_Subject . '" /></div></li>
 
-      <p>Message</p>
-      <textarea rows="5" cols="50" name="salsa_campaigns_message">' . $content->Recommended_Content . '</textarea>
+      <li class="gfield"><label class="gfield_label">Message</label>
+      <div class="ginput_container"><textarea rows="18" cols="42" name="salsa_campaigns_message">' . $content->Recommended_Content . '</textarea></div></li>
 
-      <p>First name</p>
-      <input type="text" name="salsa_campaigns_firstname" value="" />
+      <li class="gfield"><label class="gfield_label">First name</label>
+      <div class="ginput_contnainer"><input type="text" name="salsa_campaigns_firstname" value="" /></div></li>
 
-      <p>Last name</p>
-      <input type="text" name="salsa_campaigns_lastname" value="" />
+      <li class="gfield"><label class="gfield_label">Last name</label>
+      <div class="ginput_container"><input type="text" name="salsa_campaigns_lastname" value="" /></div></li>
 
-      <p>Email address</p>
-      <input type="text" name="salsa_campaigns_email" value="" />
+      <li class="gfield"><label class="gfield_label">Email address</label>
+      <div class="ginput_container"><input type="text" name="salsa_campaigns_email" value="" /></div></li>
 
-      <p>City</p>
-      <input type="text" name="salsa_campaigns_city" value="" />
+      <li class="gfield"><label class="gfield_label">Suburb</label>
+      <div class="ginput_container"><input type="text" name="salsa_campaigns_city" value="" /></div></li>
 
       <p class="submit">
        <input type="submit" name="Submit" value="Send Message" class="button" />
       </p>
     </form>
+</div>
   ';
 
   return $page;
